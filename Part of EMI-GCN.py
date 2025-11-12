@@ -132,3 +132,4 @@ class EMI_GCN2(nn.Module):
         print(f"X_Dis残差.shape={gcn_dis_res.shape}")
         print(f"最后一层输出, 进过线性层到out.shape={out_map.shape}")
         return out_map.unsqueeze(-1)                              # [B,N,H_out,1] [32,170,12,1]
+

@@ -1,6 +1,5 @@
 class EMI_GCN2(nn.Module):
     """
-    你的 EMI-GCN 主体（保留完整模块，并做最少适配）
     期望输入:
       data_dict = {"graph": [N,N] tensor, "flow_x": [B,N,H,1] tensor}
     输出:
@@ -132,5 +131,6 @@ class EMI_GCN2(nn.Module):
         print(f"X_Dis残差.shape={gcn_dis_res.shape}")
         print(f"最后一层输出, 进过线性层到out.shape={out_map.shape}")
         return out_map.unsqueeze(-1)                              # [B,N,H_out,1] [32,170,12,1]
+
 
 
